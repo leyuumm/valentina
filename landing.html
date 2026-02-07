@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before We Begin... 💭</title>
+    <link rel="stylesheet" href="landing-style.css">
+</head>
+<body>    <!-- Falling flowers animation container -->
+    <div class="falling-animation" id="fallingAnimation"></div>    <div class="container">
+        <div class="game-section" id="gameSection">
+            <div class="gif-container" id="gifContainer">
+                <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Waiting" class="reaction-gif">
+            </div>
+            <h1 class="title">Quick Question First...</h1>
+            <p class="subtitle">Let's see how honest you are</p>
+            
+            <div class="question-box">
+                <p class="question" id="question">On a scale of 1-10, how much do you like Lliam?</p>
+                <p class="hint">(Be honest... or not, I won't know 😏)</p>
+                
+                <div class="slider-container">
+                    <input type="range" min="1" max="10" value="5" class="slider" id="slider">
+                    <div class="slider-value" id="sliderValue">5</div>
+                </div>
+                
+                <div class="slider-labels">
+                    <span>Meh</span>
+                    <span>He's okay I guess</span>
+                </div>
+                
+                <button class="submit-btn" id="submitBtn">Submit Answer</button>
+            </div>
+            
+            <div class="response-box hidden" id="responseBox">
+                <p class="response-text" id="responseText"></p>
+                <button class="continue-btn" id="continueBtn">Continue →</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="monthsaryMusic" src="song.mp3" preload="auto" loop></audio>
+
+    <script src="landing-script.js"></script>
+</body>
+</html>
