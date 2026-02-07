@@ -8,8 +8,8 @@ A three-page static website built with HTML, CSS, and JavaScript. Includes falli
 
 ## Pages
 
-- **Landing Page** (`landing.html`) — Slider game asking "How much do you like Lliam?" with dynamic responses.
-- **Main Page** (`index.html`) — "Will You Be My Valentina?" prompt with growing Yes button and shrinking No button.
+- **Landing Page** (`index.html`) — Slider game asking "How much do you like Lliam?" with dynamic responses.
+- **Main Page** (`question.html`) — "Will You Be My Valentina?" prompt with growing Yes button and shrinking No button.
 - **Accepted Page** (`accepted.html`) — Celebration page displayed after accepting.
 
 ## Features
@@ -38,16 +38,16 @@ emailjs.init('YOUR_PUBLIC_KEY');
 
 Push all files to a GitHub repository and enable GitHub Pages under Settings > Pages.
 
-The entry point is `landing.html`.
+The entry point is `index.html`.
 
 ## File Structure
 
 ```
-landing.html          Landing page
-landing-style.css     Landing page styles
+index.html            Landing page
+landng-style.css     Landing page styles
 landing-script.js     Slider game logic
 
-index.html            Main question page
+question.html         Main question page
 style.css             Main page styles
 script.js             Button logic and email integration
 

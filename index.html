@@ -3,61 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentina?</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Before We Begin... 💭</title>
+    <link rel="stylesheet" href="landing-style.css">
 </head>
-<body>
-    <!-- Falling flowers animation container -->
-    <div class="falling-animation" id="fallingAnimation"></div>
-    <div class="container">
-        <div class="content-wrapper">
-            <div class="lily-header">
-                <img src="https://static.vecteezy.com/system/resources/previews/047/241/294/large_2x/pink-lily-flower-isolated-on-transparent-background-free-png.png" alt="Lily" class="lily-main">
+<body>    <!-- Falling flowers animation container -->
+    <div class="falling-animation" id="fallingAnimation"></div>    <div class="container">
+        <div class="game-section" id="gameSection">
+            <div class="gif-container" id="gifContainer">
+                <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Waiting" class="reaction-gif">
             </div>
-            <div class="gif-container" id="mainGif">
-                <img src="https://media.giphy.com/media/M90mJvfWfd5mbUuULX/giphy.gif" alt="Puppy eyes" class="reaction-gif">
-            </div>
-            <h1 class="question">Will You Be My Valentina?</h1>
-            <p class="subtitle">I know you saw this coming...</p>
+            <h1 class="title">Quick Question First...</h1>
+            <p class="subtitle">Let's see how honest you are</p>
             
-            <div class="button-container">
-                <button id="yesBtn" class="btn yes-btn">Yes</button>
-                <button id="noBtn" class="btn no-btn">No</button>
+            <div class="question-box">
+                <p class="question" id="question">On a scale of 1-10, how much do you like Lliam?</p>
+                <p class="hint">(Be honest... or not, I won't know 😏)</p>
+                
+                <div class="slider-container">
+                    <input type="range" min="1" max="10" value="5" class="slider" id="slider">
+                    <div class="slider-value" id="sliderValue">5</div>
+                </div>
+                
+                <div class="slider-labels">
+                    <span>Meh</span>
+                    <span>He's okay I guess</span>
+                </div>
+                
+                <button class="submit-btn" id="submitBtn">Submit Answer</button>
             </div>
             
-            <div id="pleadingText" class="pleading-text"></div>
+            <div class="response-box hidden" id="responseBox">
+                <p class="response-text" id="responseText"></p>
+                <button class="continue-btn" id="continueBtn">Continue →</button>
+            </div>
         </div>
     </div>
 
     <audio id="monthsaryMusic" src="song.mp3" preload="auto" loop></audio>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <script>
-        (function() {
-            var music = document.getElementById('monthsaryMusic');
-            var started = false;
-
-            function startMusic() {
-                if (started) return;
-                started = true;
-                music.play().catch(function(e) {
-                    console.log('Play failed:', e);
-                    started = false;
-                });
-            }
-
-            // Try autoplay immediately
-            music.play().catch(function() {
-                // Autoplay blocked - attach to every possible user interaction
-                ['click', 'touchstart', 'keydown'].forEach(function(evt) {
-                    document.addEventListener(evt, function handler() {
-                        startMusic();
-                        document.removeEventListener(evt, handler);
-                    }, { once: true });
-                });
-            });
-        })();
-    </script>
+    <script src="landing-script.js"></script>
 </body>
 </html>

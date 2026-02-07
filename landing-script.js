@@ -67,5 +67,5 @@ submitBtn.addEventListener('click', () => {
 
 // Continue to main question
 continueBtn.addEventListener('click', () => {
-    window.location.href = 'index.html';
+    window.location.href = 'question.html';
 });
